@@ -1,6 +1,3 @@
-# MSFProyectoFinal
-Proyecto Final: Sistema nervioso
-
 [![Open in MATLAB Online]
 
 # Proyecto Final: Sistema nervioso
