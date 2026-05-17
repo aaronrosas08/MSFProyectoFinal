@@ -24,11 +24,40 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 
 ## Objetivos
 
-
+1. Transformar el modelo fisiológico de transmisión neuronal a un circuito eléctrico usando la analogía tensión-corriente: Ve(t) ↔ potencial de acción, Ie(t) ↔ corriente de conducción axónica, Is(t) ↔ corriente de absorción sináptica, resistencias (R1, R2), capacitor (C), inductor (L).
+2. Determinar el modelo de ecuaciones integro-diferenciales.
+3. Determinar el error en estado estacionario y la estabilidad del sistema.
+4. Construir el diagrama de bloques del sistema en Simulink.
+5. Diseñar y sintonizar las ganancias kP, kI y kD con el bloque *PID Controller* y la herramienta *Tune* de Simulink.
+6. Obtener la respuesta en lazo abierto y cerrado usando Python y Simulink.
+7. Elaborar el diagrama del sistema con BioRender.com.
 
 ## Descripción detallada del sistema
- 
 
+El sistema nervioso periférico (SNP) es el conjunto de nervios y ganglios que conectan el sistema nervioso central (SNC) con los órganos, músculos y tejidos del cuerpo. Su función principal es transmitir información sensorial hacia el SNC y llevar respuestas motoras desde este hacia los efectores. La dinámica de transmisión neuronal puede representarse mediante un circuito eléctrico de segundo orden, modelando los procesos de generación, conducción y recepción del impulso nervioso bajo las siguientes suposiciones:
+ 
+1. La generación del potencial de acción en el soma se modela mediante una fuente de voltaje de entrada **Ve(t)**, que representa el estímulo inicial que supera el umbral de despolarización (~−55 mV) y desencadena la apertura masiva de canales de Na⁺.
+2. La resistencia axoplasmática al flujo de iones a lo largo del axón se modela con una resistencia **R1**, asociada a la oposición al desplazamiento iónico durante la conducción saltatoria entre nodos de Ranvier.
+3. La capacitancia de la membrana axónica se representa con un capacitor **C**, que modela el almacenamiento de carga en la bicapa lipídica y regula la velocidad de cambio del potencial de membrana.
+4. La respuesta en la terminal sináptica se modela mediante una segunda rama con un inductor **L** y una resistencia **R2**, representando la inercia iónica en los canales de Na⁺/K⁺ y la resistencia a la despolarización en el nodo receptor, respectivamente.
+5. Se identifican los siguientes dos flujos en el sistema: la corriente de conducción axónica **Ie(t)** y la corriente de absorción sináptica **Is(t)**.
+
+## Descripción del circuito RLC
+ 
+1. El circuito está formado por una malla principal que contiene la fuente **Ve(t)** y el resistor **R1**, donde se manifiesta la corriente de conducción axónica **Ie(t)**, mientras que la segunda malla está conformada por un capacitor **C** (membrana axónica) en paralelo con un arreglo en serie del inductor **L** y el resistor **R2** (inercia y resistencia sináptica), por donde circula **Is(t)**.
+2. La señal de entrada **Ve(t)** es un escalón unitario, simulando un potencial de acción sostenido ante una alteración fisiológica o patológica.
+3. La señal de salida **Vs(t)** se obtiene en el nodo de unión entre ambas mallas, representando el potencial postsináptico efectivo observado en la neurona receptora o en el órgano efector.
+4. El sistema presenta una respuesta típica de segundo orden, en donde la rapidez, estabilidad y precisión dependerán de los valores de **R2** y **C**. Para modelar la esclerosis múltiple, **R2** disminuye drásticamente (membrana desmielinizada más permeable) y **C** aumenta considerablemente (mayor área de membrana expuesta), generando un sistema subamortiguado con respuesta neuronal lenta y degradada, reproduciendo clínicamente la fatiga, debilidad muscular y lentitud de reflejos.
+## Valores de los componentes
+ 
+| Parámetro | Control (neurona sana) | Caso (esclerosis múltiple) | Componente neuronal | Unidad fisiológica |
+|-----------|----------------------|---------------------------|--------------------|--------------------|
+| R1 | 1 kΩ | 1 kΩ | Resistencia axoplasmática | K/W |
+| R2 | 10 kΩ | 500 Ω | Resistencia de la membrana terminal | K/W |
+| L | 10 mH | 10 mH | Inercia iónica | s |
+| C | 1 µF | 470 µF | Capacitancia de la bicapa lipídica | J/K |
+ 
+*Palabras clave:* Sistema nervioso periférico; Circuito RLC; Potencial de acción; Conducción saltatoria; Esclerosis múltiple; Desmielinización; Segundo orden; Sinapsis.
 
 ## Lista de archivos incluidos en el repositorio
 
