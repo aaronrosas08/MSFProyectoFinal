@@ -1,4 +1,4 @@
-[![Open in MATLAB Online]
+ [![Open in MATLAB Online]
 
 # Proyecto Final: Sistema nervioso
 
@@ -29,8 +29,9 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 3. Determinar el error en estado estacionario y la estabilidad del sistema.
 4. Construir el diagrama de bloques del sistema en Simulink.
 5. Diseñar y sintonizar las ganancias kP, kI y kD con el bloque *PID Controller* y la herramienta *Tune* de Simulink.
-6. Obtener la respuesta en lazo abierto y cerrado usando Python y Simulink.
+6. Obtener la respuesta en lazo abierto y cerrado usando Simulink.
 7. Elaborar el diagrama del sistema con BioRender.com.
+8. Elaborar un ensayo gráfico.
 
 ## Descripción detallada del sistema
 
@@ -48,6 +49,7 @@ El sistema nervioso periférico (SNP) es el conjunto de nervios y ganglios que c
 2. La señal de entrada **Ve(t)** es un escalón unitario, simulando un potencial de acción sostenido ante una alteración fisiológica o patológica.
 3. La señal de salida **Vs(t)** se obtiene en el nodo de unión entre ambas mallas, representando el potencial postsináptico efectivo observado en la neurona receptora o en el órgano efector.
 4. El sistema presenta una respuesta típica de segundo orden, en donde la rapidez, estabilidad y precisión dependerán de los valores de **R2** y **C**. Para modelar la esclerosis múltiple, **R2** disminuye drásticamente (membrana desmielinizada más permeable) y **C** aumenta considerablemente (mayor área de membrana expuesta), generando un sistema subamortiguado con respuesta neuronal lenta y degradada, reproduciendo clínicamente la fatiga, debilidad muscular y lentitud de reflejos.
+
 ## Valores de los componentes
  
 | Parámetro | Control (neurona sana) | Caso (esclerosis múltiple) | Componente neuronal | Unidad fisiológica |
@@ -63,11 +65,12 @@ El sistema nervioso periférico (SNP) es el conjunto de nervios y ganglios que c
 
 1. Cuaderno computacional de MATLAB \[.mlx].
 2. Modelo de Simulink \[.slx].
-3. Archivos de Spyder \[.py].
-4. Imagen con los parámetros del controlador.
-5. Imágenes de las simulaciones \[.pdf].
-6. Evidencia del análisis matemático: función de transferencia, modelo de ecuaciones integro-diferenciales, error en estado estacionario y estabilidad en lazo abierto.
-7. Modelo fisiológico en Biorender o BioArt.
+3. Imagen con los parámetros del controlador.
+4. Imágenes de las simulaciones \[.pdf].
+5. Evidencia del análisis matemático: función de transferencia, modelo de ecuaciones integro-diferenciales, error en estado estacionario y estabilidad en lazo abierto.
+6. Modelo fisiológico en Biorender o BioArt.
+7. Ensayo gráfico.
+8. Propuesta de proyecto
 
 ## Referencias
 
