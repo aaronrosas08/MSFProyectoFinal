@@ -18,8 +18,6 @@ Departamento de Ingeniería Eléctrica y Electrónica, Tecnológico Nacional de 
 
 ## Descripción de la asignatura
 
-<img width="1670" height="941" alt="Image" src="https://github.com/user-attachments/assets/69c5e8a4-e3a5-4126-8d69-3dee836a6ef0" />
-
 El modelizado de sistemas fisiológicos es una herramienta importante en Ingeniería Biomédica, permite comprender el funcionamiento del cuerpo humano, así como diseñar y evaluar terapias y dispositivos médicos; se define como el proceso de formular modelos matemáticos o computacionales que representan el comportamiento y la interacción de los sistemas biológicos y fisiológicos. Esta asignatura pretende aportar al perfil del Ingeniero Biomédico la capacidad de realizar investigación científica en el área de Biología de Sistemas con la finalidad de dirigir y participar en equipos de trabajo interdisciplinarios en contextos nacionales e internacionales, así como de proporcionar soluciones informáticas para resolver problemas en el campo de la Ingeniería Biomédica con ética profesional; lo anterior al proporcionar al estudiante bases sólidas para modelizar sistemas y diseñar controladores para la solución de problemas en las áreas de atención médica y del sector industrial médico. La construcción de analogías entre circuitos eléctricos y sistemas fisiológicos para la formulación de modelos matemáticos y el diseño de controladores mediante la experimentación in silico brindan herramientas de gran aplicación en el quehacer profesional del Ingeniero Biomédico.
 
 La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estudios de la carrera en Ingeniería Biomédica con la siguiente competencia general del curso: Utiliza las propiedades de los circuitos RLC para describir la dinámica de sistemas fisiológicos, obtener modelos matemáticos y aplicar el control clásico, esto con el objetivo de integrar los principios de la Ingeniería de Control, la Electrónica Analógica y las Ciencias de la Computación con la Anatomía y Fisiología del cuerpo humano para proporcionar descripciones cuantitativas y cualitativas de sistemas fisiológicos complejos con el objetivo de modelizar, analizar, controlar, ilustrar y predecir su dinámica tanto en el corto como en el largo plazo.
@@ -36,6 +34,8 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 8. Elaborar un ensayo gráfico.
 
 ## Descripción detallada del sistema
+
+<img width="1670" height="941" alt="Image" src="https://github.com/user-attachments/assets/69c5e8a4-e3a5-4126-8d69-3dee836a6ef0" />
 
 El sistema nervioso periférico (SNP) es el conjunto de nervios y ganglios que conectan el sistema nervioso central (SNC) con los órganos, músculos y tejidos del cuerpo. Su función principal es transmitir información sensorial hacia el SNC y llevar respuestas motoras desde este hacia los efectores. La dinámica de transmisión neuronal puede representarse mediante un circuito eléctrico de segundo orden, modelando los procesos de generación, conducción y recepción del impulso nervioso bajo las siguientes suposiciones:
  
@@ -60,8 +60,19 @@ El sistema nervioso periférico (SNP) es el conjunto de nervios y ganglios que c
 | R2 | 10 kΩ | 500 Ω | Resistencia de la membrana terminal | K/W |
 | L | 10 mH | 10 mH | Inercia iónica | s |
 | C | 1 µF | 470 µF | Capacitancia de la bicapa lipídica | J/K |
+
+## Simulación de la respuesta neuronal mediante un circuito RLC
+
+<img width="1672" height="640" alt="Image" src="https://github.com/user-attachments/assets/c738b1d5-c2c6-4f46-9837-dde822503852" />
  
 *Palabras clave:* Sistema nervioso periférico; Circuito RLC; Potencial de acción; Conducción saltatoria; Esclerosis múltiple; Desmielinización; Segundo orden; Sinapsis.
+
+## Analisis matematico
+Ecuaciones integro
+Func trans
+Eggog de ambos dos 2 casos
+Estabilidad en ambos dos 2 casos
+Respuesta y por que
 
 ## Lista de archivos incluidos en el repositorio
 
