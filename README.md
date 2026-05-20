@@ -1,6 +1,6 @@
  [![Open in MATLAB Online]
 
-# Proyecto Final: Sistema nervioso
+# Proyecto Final: Sistema Nervioso
 
 ## Información del estudiante
 
